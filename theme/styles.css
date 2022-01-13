@@ -1,0 +1,23 @@
+.test {
+    background: var(--input-bg);
+    border: var(--input-border);
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-right: 36px;
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.startButton {
+    padding: 10px;
+    margin-right: 10px;
+    align-self: center;
+    border-radius: 16px;
+    border: 1px solid;
+    color: #9591a1;
+}
