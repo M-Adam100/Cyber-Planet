@@ -1,6 +1,6 @@
 {
     "name": "Cyber Planet",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "",
     "manifest_version": 3,
     "incognito": "split",
@@ -30,6 +30,10 @@
         "default_popup": "popup/popup.html"
     },
     "permissions": [
-        "tabs"
-    ]
+        "scripting"
+    ],
+    "host_permissions": [
+      "https://www.magiceden.io/*"
+     ]
+    
 }

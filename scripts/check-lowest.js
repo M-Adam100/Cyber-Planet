@@ -13,11 +13,25 @@ console.log("Running Script");
 
         valueCheck = setInterval(() => {
             const priceNode = document.querySelector('div[class="my-2 card__price tw-truncate"]')?.innerText
-            const price = Number(priceNode.split(' ')[0]);
-            const thresholdValue = Number(document.querySelector('input#threshold').value)
-            if (price < thresholdValue) {
-                console.log("BUY IT");
+            if (priceNode) {
+                const price = Number(priceNode.split(' ')[0]);
+                const thresholdValue = Number(document.querySelector('input#threshold').value)
+                console.log({price, thresholdValue})
+                if (price < thresholdValue) {
+                    const url = document.querySelector('img[class="card-img-top"]').parentElement.href
+                    console.log(url);
+                    if (url) {
+                        stopWorking();
+                        CLICKED = false;
+                        chrome.runtime.sendMessage({
+                            message: "BUY",
+                            url
+                        })
+                    }
+                   
+                }
             }
+           
         }, 1000)
     }
 
@@ -41,6 +55,7 @@ console.log("Running Script");
         c.className = 'startButton';
         a.className = 'test';
         a.placeholder = 'Enter Threshold Value';
+        a.style.borderColor = 'white';
         a.id = 'threshold';
 
         b.innerText = 'Start';
