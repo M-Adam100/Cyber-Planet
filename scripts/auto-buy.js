@@ -4,11 +4,12 @@ console.log("BUYING STUFF");
 
     const interval = setInterval(() => {
         
-        const buttons = [...document.querySelectorAll('button')].filter(item => item.innerText == 'Buy now');
-        if (buttons.length) {
+        const button = document.querySelector('.item-info-list')?.querySelector('button')
+        if (button) {
             clearInterval(interval);
-            buttons[0].click();
+            button.click();
         }
+
 
     }, 500)
 

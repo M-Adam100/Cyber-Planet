@@ -16,7 +16,7 @@
                 "scripts/check-lowest.js"
             ],
             "matches": [
-                "https://www.magiceden.io/marketplace/*"
+                "*://*.magiceden.io/*"
             ],
            
             "run_at": "document_end",
