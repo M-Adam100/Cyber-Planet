@@ -16,7 +16,7 @@
                 "scripts/check-lowest.js"
             ],
             "matches": [
-                "*://*.magiceden.io/*"
+                "*://*.magiceden.io/marketplace/*"
             ],
            
             "run_at": "document_end",
@@ -33,7 +33,7 @@
         "scripting"
     ],
     "host_permissions": [
-      "https://www.magiceden.io/*"
+      "*://*.magiceden.io/*"
      ]
     
 }
